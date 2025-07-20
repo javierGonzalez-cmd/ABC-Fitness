@@ -25,53 +25,53 @@
     <main>
     <h2>Our Products</h2>
 
-    <button onclick="alert('Viewing cart...')">🛒 View Shopping Cart</button>
+    <button id="cart-button"> View Shopping Cart</button>
 
     <section class="grid-gallery">
         <div class="product">
             <img src="Images/Client2_YogaMat.png" alt="Yoga Mat">
             <p>Eco-friendly Yoga Mat</p>
-            <button>Add to Cart</button>
+            <button class="add-to-cart">Add to Cart</button>
         </div>
         <div class="product">
             <img src="Images/Client2_TeeShirt.png" alt="T-Shirt">
             <p>Breathable Workout T-Shirt</p>
-            <button>Add to Cart</button>
+            <button class="add-to-cart">Add to Cart</button>
         </div>
         <div class="product">
             <img src="Images/Client2_WaterBottle.png" alt="Water Bottle">
             <p>Leak-proof Water Bottle</p>
-            <button>Add to Cart</button>
+            <button class="add-to-cart">Add to Cart</button>
         </div>
         <div class="product">
             <img src="Images\Client2_IndividualKickboxing.png" alt="Kickboxing">
             <p>1-on-1 Kickboxing</p>
-            <button>Add to Cart</button>
+            <button class="add-to-cart">Add to Cart</button>
         </div>
         <div class="product">
             <img src="Images\Client2_IndividualPilates.png" alt="Pilates">
             <p>1-on-1 Pilates</p>
-            <button>Add to Cart</button>
+            <button class="add-to-cart">Add to Cart</button>
         </div>
         <div class="product">
             <img src="Images\Client2_IndividualYoga.png" alt="Yoga">
             <p>1-on-1 Yoga</p>
-            <button>Add to Cart</button>
+            <button class="add-to-cart">Add to Cart</button>
         </div>
         <div class="product">
             <img src="Images\Client2_GroupKickboxing.png" alt="Group Kickboxing">
             <p>Group Kickboxing classes</p>
-            <button>Add to Cart</button>
+            <button class="add-to-cart">Add to Cart</button>
         </div>
         <div class="product">
             <img src="Images\Client2_GroupPilates.png" alt="Group Pilates">
             <p>Group Pilates classes</p>
-            <button>Add to Cart</button>
+            <button class="add-to-cart">Add to Cart</button>
         </div>
         <div class="product">
             <img src="Images\Client2_GroupYoga.png" alt="Group Yoga">
             <p>Group Yoga classes</p>
-            <button>Add to Cart</button>
+            <button class="add-to-cart">Add to Cart</button>
         </div>
     </section>
 </main>
@@ -81,7 +81,7 @@
 
         <section id="newsletter">
             <h3>Subscribe to our Newsletter</h3>
-            <form action="#" method="post">
+            <form id="newsletter-form" action="#" method="post">
                 <input type="email" name="email" placeholder="Enter your email" required>
                 <button type="submit">Subscribe</button>
             </form>
@@ -117,5 +117,23 @@
     </footer>
 
     <script src="script.js"></script>
+
+    <!-- Cart Modal -->
+<div id="cart-modal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <h2>Your Shopping Cart</h2>
+    <div id="cart-items">
+        <!-- Cart items will be inserted here dynamically -->
+</div>
+
+<div class="modal-buttons">
+  <button id="clear-cart">Clear Cart</button>
+  <button id="process-order">Process Order</button>
+</div>
+
+  </div>
+</div>
+
 </body>
 </html>
